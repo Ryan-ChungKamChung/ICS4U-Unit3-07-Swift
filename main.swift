@@ -6,43 +6,38 @@
 //  Version 1.0
 //  Copyright (c) 2021 Ryan Chung. All rights reserved.
 //
-//  This class demonstrates the vehicle class
+//  This class demonstrates the vehicle subclasses
 //
 
-// Stub program to demonstrate the Vehicle class
-let vehicle1 = Vehicle(newNumOfDoors: 4, newMaxSpeed: 150,
-    newLicensePlate: "ASDF404", newColour: "Red")
+// Stub program to demonstrate the Vehicle subclasses
+let truck = Truck(newColour: "Red", newMaxSpeed: 250,
+    newLicensePlate: "ASDF123")
 
-let vehicle2 = Vehicle(newNumOfDoors: 2, newMaxSpeed: 200,
-    newLicensePlate: "QWER123", newColour: "Blue")
+let bike = Bike(newColour: "Blue", newMaxSpeed: 75)
 
-vehicle1.licensePlate = "FGHJ968"
-vehicle1.colour = "Green"
-vehicle1.accelerate(accelerateBy: 60)
+truck.accelerate(accelerateBy: 50)
+truck.provideAir(airQuantity: 2)
 
 print(
     """
 
-    License Plate: \(vehicle1.licensePlate)
-    Colour: \(vehicle1.colour)
-    Number of Doors: \(vehicle1.numOfDoors)
-    Max Speed: \(vehicle1.maxSpeed)
-    Current Speed: \(vehicle1.speed)
+    License Plate: \(truck.licensePlate)
+    Max Speed: \(truck.maxSpeed)
+    Speed: \(truck.speed)
+    Colour: \(truck.colour)
     """
 )
 
-vehicle2.colour = "Black"
-vehicle2.accelerate(accelerateBy: 75)
-vehicle2.brake(brakeBy: 60)
+bike.cadence = 100
+bike.ringBell()
 
 print(
     """
 
-    License Plate: \(vehicle2.licensePlate)
-    Colour: \(vehicle2.colour)
-    Number of Doors: \(vehicle2.numOfDoors)
-    Max Speed: \(vehicle2.maxSpeed)
-    Current Speed: \(vehicle2.speed)
+    Colour: \(bike.colour)
+    Max Speed: \(bike.maxSpeed)
+    Current Speed: \(bike.speed)
+    Cadence: \(bike.cadence)
     """
 )
 

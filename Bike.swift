@@ -22,6 +22,6 @@ public class Bike: Vehicle {
 
     // Prints "Ding!"
     func ringBell() {
-        print("Ding!")
+        print("\nDing!")
     }
 }
